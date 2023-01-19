@@ -1,20 +1,19 @@
 import './App.css';
+import React, { useState } from "react";
 import HomePage from './pages/HomePage';
-import NavigationBar from './components/NavigationBar/NavigationBar';
 
+// import { useHistory } from 'react-router-dom';
+// import { useForm } from 'react-hook-form';
 
 function App() {
+
   return (
-    <div className="App">
-      <NavigationBar/>
-
-      <header className="App-header">
-        
+    <>
+      <div>
         <HomePage/>
-
-      </header>
-    </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
