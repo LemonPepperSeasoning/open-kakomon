@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
 
 
@@ -11,9 +12,10 @@ function App() {
 
   return (
     <>
-      <div>
-        <Header/>
-        <HomePage/>
+      <div class="flex flex-col h-screen justify-between">
+        <header><Header /></header>
+        <main class="mb-auto"><HomePage /></main>
+        <footer> <Footer /></footer>
       </div>
     </>
   );
