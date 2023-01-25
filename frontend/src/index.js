@@ -1,13 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AboutPage from './pages/AboutPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/privacy-policy" element={<AboutPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/licensing" element={<AboutPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/contact" element={<AboutPage />} />
+      </Routes>
+
+    </BrowserRouter>
   </React.StrictMode>
 );
 

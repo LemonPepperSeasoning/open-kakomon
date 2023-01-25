@@ -1,3 +1,5 @@
+import { Route } from "react-router-dom";
+import AboutPage from "../../pages/AboutPage";
 
 const Footer = () => {
     return (
@@ -10,16 +12,16 @@ const Footer = () => {
                     </a>
                     <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                            <a href="/about" class="mr-4 hover:underline md:mr-6 ">About</a>
                         </li>
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                            <a href="/privacy-policy" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                            <a href="/licensing" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Contact</a>
+                            <a href="/contact" class="hover:underline">Contact</a>
                         </li>
                     </ul>
                 </div>
