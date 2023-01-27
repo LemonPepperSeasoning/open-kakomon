@@ -1,8 +1,7 @@
-const basicInfo = require('./basicInfo');
-const servers = require('./servers');
+import basicInfo from "./basicInfo";
+import servers from "./servers";
+import components from "./components";
+import endpoints from "./API/index"
 
 
-module.exports = {
-    ...basicInfo,
-    ...servers
-};
+export default { ...basicInfo, ...servers, ...components, ...endpoints}

@@ -1,9 +1,8 @@
-const express = require("express");
+import express from 'express'
+import swaggerUi from 'swagger-ui-express'
+import docs from './docs/index'
 
 const app = express();
-
-const swaggerUi = require("swagger-ui-express");
-const docs = require('./docs');
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(docs));
 

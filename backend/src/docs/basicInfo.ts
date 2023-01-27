@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     openapi: "3.0.3", // present supported openapi version
     info: {
       title: "Simple Todos API", // short title.
@@ -7,7 +7,7 @@ module.exports = {
       contact: {
         name: "Takahiro Ishiguro", // your name
         email: "takahiro@swe.com", // your email
-        url: "https://lemonpepperseasoning.github.io/", // your website
+        url: "lemonpepperseasoning.github.io", // your website
       },
     },
-  };
+  }

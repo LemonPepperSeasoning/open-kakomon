@@ -1,4 +1,5 @@
 import app from './server'
 import logger from './utils/logger'
+import defaultConfig from './config/default'
 
-app.listen(8080, () => logger.info(`App server listening on port 8080!`));
+app.listen(defaultConfig.PORT, () => logger.info(`App server listening on port ${defaultConfig.PORT}!`));
