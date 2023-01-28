@@ -1,57 +1,51 @@
 export default {
     components:{
         schemas:{
-            id:{
-                type:'string',
-                description:"An id of a todo",
-                example: "tyVgf"
-            },
-            Todo:{
+            School:{
                 type:'object',
                 properties:{
                     id:{
                         type:'string',
-                        description:"Todo identification number",
-                        example:"ytyVgh"
+                        description:"School identification number",
+                        example:"u0001"
                     },
-                    title:{
-                        type:'string',
-                        description:"Todo's title",
-                        example:"Coding in JavaScript"
+                    name:{
+                        type: 'string',
+                        description: 'Name of school. (Typically university or high school)',
+                        example: "University of Tokyo"
                     },
-                    completed:{
-                        type:"boolean",
-                        description:"The status of the todo",
-                        example:false
+                    Address:{
+                        type: 'string',
+                        description: 'Address of school. (can be remote)',
+                        example: "Tokyo Japan"
                     }
                 }
             },
-            TodoInput:{
+            Exam:{
                 type:'object',
                 properties:{
-                    title:{
+                    id:{
                         type:'string',
-                        description:"Todo's title",
-                        example:"Coding in JavaScript"
+                        description:"Exam identification number",
+                        example:"u0001"
                     },
-                    completed:{
-                        type:"boolean",
-                        description:"The status of the todo",
-                        example:false
-                    }
+                    schoolId:{
+                        type:'string',
+                        description:"School identification number",
+                        example:"u0001"
+                    },
+                    year:{
+                        type: 'string',
+                        description: 'Year of the exam',
+                        example: "2022"
+                    },
+                    major:{
+                        type: 'string',
+                        description: 'major/category of exam',
+                        example: "2022"
+                    },
                 }
             },
-            Error:{
-                type:'object',
-                properties:{
-                    message:{
-                        type:'string'
-                    },
-                    internal_code:{
-                        type:'string'
-                    }
-                }
-            }
         }
     }
 }
