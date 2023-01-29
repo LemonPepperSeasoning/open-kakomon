@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaSearch } from 'react-icons/fa';
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer';
-
+import ExamLists from "../components/ExamLists/ExamLists";
 
 function HomePage() {
 
@@ -43,6 +43,10 @@ function HomePage() {
                 </div>
               </form>
 
+            </div>
+
+            <div className="flex justify-center">
+              <ExamLists/>
             </div>
           </div>
         </main>
