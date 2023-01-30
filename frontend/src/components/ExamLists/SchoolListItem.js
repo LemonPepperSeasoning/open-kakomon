@@ -12,7 +12,7 @@ const SchoolListItem = (props) => {
         <>
             <div className="p-3 mb-8 rounded-md bg-slate-200" >
 
-                <button className="w-full p-1 rounded-md hover:bg-slate-400" onClick={toggle}>
+                <button className="w-full p-1 text-left rounded-md hover:bg-slate-400" onClick={toggle}>
                     {props.name}
                 </button>
                 

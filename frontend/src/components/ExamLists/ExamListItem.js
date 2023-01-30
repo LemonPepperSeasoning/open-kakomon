@@ -3,7 +3,7 @@ const ExamListItem = (props) => {
 
     return (
         <>
-            <div className="p-3" >
+            <div className="p-3 rounded-md hover:bg-slate-300" >
                 <p>{props.year}, {props.major} 
 
                     <div className="float-right">
