@@ -4,7 +4,7 @@ export interface ExamModel {
     id: string,
     year: string,
     major: string,
-    schoolId: mongoose.Type.ObjectId,
+    schoolId: mongoose.ObjectId,
 }
 
 const schema = new Schema<ExamModel>({
