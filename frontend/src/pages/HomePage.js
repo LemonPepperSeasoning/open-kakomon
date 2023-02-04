@@ -15,14 +15,13 @@ function HomePage() {
     // history.push(`/search?university=${data.university}`);
   }
 
-  
-
 
   return (
     <>
       <main class="mb-auto">
         <div>
           <div className="bg-gray-100">
+
             <form className="max-w-lg p-10 mx-auto" onSubmit={onSubmit}>
               <h1 className="p-5 text-2xl font-medium">{t('search_title')}</h1>
 
@@ -46,7 +45,7 @@ function HomePage() {
           </div>
 
           <div className="flex justify-center">
-            <ExamLists/>
+            <ExamLists />
           </div>
         </div>
       </main>

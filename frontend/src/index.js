@@ -14,13 +14,14 @@ import Footer from './components/Footer/Footer';
 
 import './i18n'
 import './index.css';
+import PostExamPage from './pages/PostExamPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div class="flex flex-col h-screen justify-between">
       <header><Header /></header>
-      
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -44,6 +45,10 @@ root.render(
 
         <Routes>
           <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/share-exam" element={<PostExamPage />} />
         </Routes>
       </BrowserRouter>
 
