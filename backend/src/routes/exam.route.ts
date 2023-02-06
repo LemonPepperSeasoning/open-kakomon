@@ -17,14 +17,14 @@ const routes = Router();
 *       content:
 *         application/json:
 *           schema:
-*             $ref: '#/components/schemas/Book'
+*             $ref: '#/components/schemas/Exam'
 *     responses:
 *       200:
 *         description: The created book.
 *         content:
 *           application/json:
 *             schema:
-*               $ref: '#/components/schemas/Book'
+*               $ref: '#/components/schemas/Exam'
 *       500:
 *         description: Some server error
 *
@@ -46,14 +46,14 @@ routes.post('/', createExam);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Book'
+ *             $ref: '#/components/schemas/Exam'
  *     responses:
  *       200:
  *         description: The created book.
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Book'
+ *               $ref: '#/components/schemas/Exam'
  *       500:
  *         description: Some server error
  *
