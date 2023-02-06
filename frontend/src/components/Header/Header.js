@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <>
             <div className='flex border-b-2 border-gray-100'>
-                <a href="/" className='mr-auto'>
+                <a href="/" className='pl-2 mr-auto'>
                     <img
                         src={i18n.language === 'en' ? "/open-kakomon.png" : "/open-kakomon-jp.png"}
                         alt="company logo"
@@ -21,7 +21,7 @@ const Header = () => {
                     <NavButton title="upload_exam" path="/share-exam" />
                 </div>
 
-                <div className='mt-auto block-inline'>
+                <div className='pr-20 mt-auto block-inline'>
                     <LanguageSelector />
                 </div>
             </div>
