@@ -10,7 +10,7 @@ const LanguageSelector = () => {
 
 
     return (
-        <div className='border-b-4 border-transparent hover:border-blue-500'>
+        <div className='border-b-[3px] border-transparent hover:border-blue-500'>
             <select className="p-2 border-transparent rounded-md w-28"
                 name="Language"
                 id="language"
@@ -21,7 +21,6 @@ const LanguageSelector = () => {
                 <option value="jp">日本語</option>
             </select>
         </div >
-
     )
 }
 

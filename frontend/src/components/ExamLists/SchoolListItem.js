@@ -6,7 +6,7 @@ const SchoolListItem = (props) => {
     const [open, setOPen] = useState(false);
     const toggle = () => {
         setOPen(!open);
-      };
+    };
 
     return (
         <>
@@ -16,15 +16,15 @@ const SchoolListItem = (props) => {
                     <p class="font-semibold"> {props.name}</p>
                     {/* {props.name} */}
                 </button>
-                
+
                 {open && (
-                <div className="toggle">
-                    {props.exams.map(c => <ExamListItem year={c.year} major={c.major}/>)}
-                </div>
+                    <div className="toggle">
+                        {props.exams.map(c => <ExamListItem year={c.year} major={c.major} />)}
+                    </div>
                 )}
-                
+
             </div>
-            
+
         </>
     )
 }
