@@ -1,13 +1,8 @@
 import mongoose, { Schema, model } from "mongoose";
 
-export interface SchoolModel {
-  id: string;
-  name: string;
-  address: string;
-  national_ranking: number;
-  international_ranking: number;
-  country: string;
-  school_image_url: string;
+export interface ViewModel {
+  school_id: string;
+  count: number;
 }
 
 /**
@@ -34,14 +29,9 @@ export interface SchoolModel {
  *         name: The New Turing Omnibus
  *         address: Alexander K. Dewdney
  */
-const schema = new Schema<SchoolModel>({
-  id: { type: String, required: true },
-  name: { type: String, required: true },
-  address: { type: String, required: true },
-  national_ranking: { type: Number, required: true },
-  international_ranking: { type: Number, required: true },
-  country: { type: String, required: true },
-  school_image_url: { type: String, required: true },
+const schema = new Schema<ViewModel>({
+  school_id: { type: String, required: true },
+  count: { type: Number, required: true },
 });
 
-export default model<SchoolModel>("School", schema);
+export default model<ViewModel>("View", schema);

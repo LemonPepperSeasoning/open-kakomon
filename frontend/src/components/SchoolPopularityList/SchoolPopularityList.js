@@ -57,7 +57,6 @@ const SchoolPopularityList = () => {
           Popular school
         </div>
         <ul className="box-border grid grid-cols-1 gap-6 rounded-md md:grid-cols-2 lg:grid-cols-3 bg-slate-100">
-
           {demoData.map(c => (<li><SchoolPopularityListItem school={c} /></li>))}
         </ul>
       </div>
