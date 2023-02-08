@@ -24,7 +24,7 @@ function HomePage() {
           <div className="bg-gray-100">
 
             <form className="max-w-xl p-10 mx-auto" onSubmit={onSubmit}>
-              <h1 className="p-5 text-2xl font-medium">{t('search_title')}</h1>
+              <h1 className="p-5 text-3xl font-medium">{t('search_title')}</h1>
 
               <div className="flex w-full rounded-md">
                 <div className="justify-center w-full" >
@@ -34,8 +34,8 @@ function HomePage() {
                   />
                 </div>
 
-                <button className="px-4">
-                  <FaSearch className="w-5 text-blue-500" />
+                <button className="px-4 rounded-md hover:bg-gray-300">
+                  <FaSearch className="w-5 text-blue-400" />
                 </button>
               </div>
 
@@ -49,7 +49,7 @@ function HomePage() {
                   />
                 </div>
 
-                <button className="px-4 bg-blue-600 rounded-md">
+                <button className="px-4 bg-blue-600 rounded-md hover:bg-blue-700">
                   <FaSearch className="w-5 text-white" />
                 </button>
               </div>

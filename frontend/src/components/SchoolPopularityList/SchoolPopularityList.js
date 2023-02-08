@@ -42,8 +42,24 @@ const SchoolPopularityList = () => {
 
   return (
     <>
-      <div className="grid w-3/4 grid-cols-3 grid-rows-3 p-4 m-8 rounded-md bg-slate-100 ">
-        {demoData.map(c => <SchoolPopularityListItem school={c} />)}
+      {/* <div className='w-3/4 m-4'>
+        <div className='ml-4 font-bold'>
+          Popular school
+        </div>
+        <div className="grid rounded-md grid-cols-1p-4 lg:grid-cols-2 xl:grid-cols-3 bg-slate-100">
+          {demoData.map(c => <SchoolPopularityListItem school={c} />)}
+        </div>
+      </div> */}
+
+
+      <div className='m-4 '>
+        <div className='ml-1 text-2xl font-bold'>
+          Popular school
+        </div>
+        <ul className="box-border grid grid-cols-1 gap-6 rounded-md md:grid-cols-2 lg:grid-cols-3 bg-slate-100">
+
+          {demoData.map(c => (<li><SchoolPopularityListItem school={c} /></li>))}
+        </ul>
       </div>
     </>
   )
