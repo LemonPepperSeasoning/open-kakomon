@@ -21,21 +21,25 @@ export interface ExamModel {
  *       properties:
  *         id:
  *           type: string
- *           description: The auto-generated id of the book
+ *           description: The id of the exam
  *         year:
  *           type: string
- *           description: The title of your book
+ *           description: The year of exam
  *         major:
  *           type: string
- *           description: The book author
+ *           description: The major of school
  *         schoolId:
- *           type: boolean
+ *           type: string
  *           description: Whether you have finished reading the book
+ *         visibility:
+ *           type: boolean
+ *           description: Whether the exam is visible to public
  *       example:
- *         id: d5fE_asz
- *         year: The New Turing Omnibus
- *         major: Alexander K. Dewdney
- *         schoolId: false
+ *         id: e0001
+ *         year: 2018
+ *         major: Business
+ *         schoolId: s0001
+ *         visibility: true
  */
 const schema = new Schema<ExamModel>({
   id: { type: String, required: true },

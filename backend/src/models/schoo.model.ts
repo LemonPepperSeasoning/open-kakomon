@@ -22,17 +22,33 @@ export interface SchoolModel {
  *       properties:
  *         id:
  *           type: string
- *           description: The auto-generated id of the book
+ *           description: The auto-generated id of the university
  *         name:
  *           type: string
- *           description: The title of your book
+ *           description: The name of the univerity.
  *         address:
  *           type: string
- *           description: The book author
+ *           description: The address of the univeristy.
+ *         national_ranking:
+ *           type: string
+ *           description: National ranking of this university.
+ *         international_ranking:
+ *           type: string
+ *           description: International ranking of this university.
+ *         country:
+ *           type: string
+ *           description: The country where the school is located.
+ *         school_image_url:
+ *           type: string
+ *           description: The url to s3 bucket where school image is stored.
  *       example:
- *         id: d5fE_asz
- *         name: The New Turing Omnibus
- *         address: Alexander K. Dewdney
+ *         id: u0001
+ *         name: University of Tokyo
+ *         address: 1 tokyo, Tokyo, Japan
+ *         national_ranking: 1
+ *         international_ranking: 20
+ *         country: Japan
+ *         school_image_url: s3://bucket_url.com
  */
 const schema = new Schema<SchoolModel>({
   id: { type: String, required: true },
