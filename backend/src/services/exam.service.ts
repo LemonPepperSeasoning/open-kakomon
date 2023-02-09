@@ -7,3 +7,13 @@ const createExam = async (examDetails: ExamModel) => {
 
   return exam;
 };
+
+const updateExam = async () => {
+  // TODO: Implement
+  return;
+};
+
+const deleteExam = async () => {
+  // TODO: Implement
+  return;
+};
