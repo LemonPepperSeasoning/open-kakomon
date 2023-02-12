@@ -69,14 +69,14 @@ function HomePage() {
 
           <div className="max-w-2xl m-auto text-2xl bg-gray-100">
             <p>
-              This is a public database, gathered by our community. <br />
-              If you have any exam, please share with us by submitting it below.
+              {t('gather-by-community-message')} <br />
+              {t('please-share-message')}
             </p>
 
             <br />
             <a href='/share-exam'>
-              <button className="w-1/3 p-2 text-white bg-blue-600 rounded-md p-82 hover:bg-blue-700">
-                Upload exam
+              <button className="p-2 text-white bg-blue-600 rounded-md p-82 hover:bg-blue-700">
+                {t('upload_exam')}
               </button>
             </a>
 

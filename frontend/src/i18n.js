@@ -33,6 +33,8 @@ i18n
                     "licensing": "Licensing",
                     "contact": "Contact",
                     "open-kakomon": "Open Kakomon",
+                    "gather-by-community-message": "This is a public database, gathered by our community.",
+                    "please-share-message": "If you have any exam, please share with us by submitting it below."
                 }
             },
             jp: {
@@ -49,6 +51,8 @@ i18n
                     "licensing": "利用規約",
                     "contact": "お問い合わせ",
                     "open-kakomon": "オープン過去問",
+                    "gather-by-community-message": "このサイトは、皆さもの協力により過去問を提供させていただいております。",
+                    "please-share-message": "もし、過去問がありましたら是非シェアーしてください。"
                 }
             }
         },
