@@ -2,23 +2,22 @@ import { NextFunction, Request, Response } from "express";
 import { ObjectId } from "mongodb";
 import School, { SchoolModel } from "../models/schoo.model";
 import httpStatus from "http-status";
+import schoolService from "../services/school.service";
+
+import logger from "../utils/logger";
 
 export const createSchool = async (
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> => {
-  const school = new School({
-    id: "Tokyo",
-    year: "2022",
-    major: "Business",
-    schoolId: new ObjectId("4eb6e7e7e9b7f4194e000001"),
-    visibility: true,
-  });
-
-  await school.save();
-
-  console.log("Called : #createSchool");
+  logger.info("POST /school request from frontend");
+  try {
+    const createdSchool = await schoolService.createSchool(req.body);
+    res.status(httpStatus.CREATED).json(createdSchool).end();
+  } catch (e) {
+    next(e);
+  }
 };
 
 export const getSchool = async (
@@ -26,5 +25,26 @@ export const getSchool = async (
   res: Response,
   next: NextFunction
 ): Promise<void> => {
-  console.log("Called : #getSchool");
+  logger.info("GET /school request from frontend");
+  try {
+    // TODO Implement
+    logger.info("ERROR: getSchool() not yet implemented");
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const getAllSchool = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  logger.info("GET /school request from frontend");
+  try {
+    // TODO Implement
+    const schools = await schoolService.getAllSchools();
+    res.status(httpStatus.CREATED).json(schools).end();
+  } catch (e) {
+    next(e);
+  }
 };

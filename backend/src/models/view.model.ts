@@ -9,7 +9,7 @@ export interface ViewModel {
  * @swagger
  * components:
  *   schemas:
- *     School:
+ *     View:
  *       type: object
  *       required:
  *         - id
