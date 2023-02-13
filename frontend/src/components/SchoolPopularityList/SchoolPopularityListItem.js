@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { countryList } from '../../utils/CountryNameToISO'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import universityPicture from '../../assets/images/UoT.jpeg';
 
 const SchoolPopularityListItem = (props) => {
 
@@ -30,7 +31,7 @@ const SchoolPopularityListItem = (props) => {
             <a href={"/university/" + props.school.name}>
                 <div className="flex p-1 mx-auto rounded-md w-72 bg-slate-200 hover:bg-slate-300">
                     <div>
-                        <img className="object-cover w-12 h-12 m-1" src={imageSrc} alt="school logo" />
+                        <img className="object-cover w-12 h-12 m-1" src={universityPicture} alt="school logo" />
                     </div>
 
                     <div className="w-56 p-1">

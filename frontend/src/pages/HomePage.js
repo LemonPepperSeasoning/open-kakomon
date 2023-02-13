@@ -67,21 +67,22 @@ function HomePage() {
           </div>
 
 
-          <div className="max-w-2xl m-auto text-2xl bg-gray-100">
+          <div className="max-w-2xl m-auto text-xl font-semibold bg-gray-100 w-fit">
             <p>
               {t('gather-by-community-message')} <br />
               {t('please-share-message')}
             </p>
 
             <br />
-            <a href='/share-exam'>
-              <button className="p-2 text-white bg-blue-600 rounded-md p-82 hover:bg-blue-700">
-                {t('upload_exam')}
-              </button>
-            </a>
+            <div className="m-auto w-fit">
+              <a href='/share-exam'>
+                <button className="p-2 text-white bg-blue-600 rounded-md p-82 hover:bg-blue-700">
+                  {t('upload_exam')}
+                </button>
+              </a>
+            </div>
 
           </div>
-
 
         </div>
       </main>

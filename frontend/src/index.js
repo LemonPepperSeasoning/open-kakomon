@@ -52,6 +52,8 @@ root.render(
         </Routes>
       </BrowserRouter>
 
+      <br />
+      <br />
       <footer> <Footer /></footer>
     </div>
   </React.StrictMode>

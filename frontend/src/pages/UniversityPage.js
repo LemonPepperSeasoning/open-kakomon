@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ExamLists from "../components/ExamLists/ExamLists";
+import SchoolInfo from "../components/SchoolInfo/SchoolInfo"
 // import image from 'assets/UoT.jpeg'
 
 function UniversityPage() {
@@ -12,33 +13,10 @@ function UniversityPage() {
     });
 
 
-    /*
-    Temporay dummy data
-    */
-    const address = "7 Chome-3-1 Hongo, Bunkyo City, Tokyo. 113-8654"
-    const nationalRanking = 1
-    const internationalRanking = 81
-
     return (
         <>
             <div>
-                <div>
-
-                    <img src="/assets/UoT.jpeg" alt="image" />
-                    <p>
-                        University Name: {name}
-                    </p>
-                    <p>
-                        Address: {address}
-                    </p>
-                    <p>
-                        International Ranking: {internationalRanking}
-                    </p>
-                    <p>
-                        National ranking: {nationalRanking}
-                    </p>
-                </div>
-
+                <SchoolInfo schoolName={name} />
 
                 <div>
                     <div className="flex justify-center">

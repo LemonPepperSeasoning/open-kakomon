@@ -9,7 +9,7 @@ const Footer = () => {
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <a href="" class="flex items-center mb-4 sm:mb-0">
                         <img src="/favicon.ico" class="h-8 mr-3" alt="Open kakomon Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{t('open-kakomon')}</span>
+                        <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">{t('open-kakomon')}</span>
                     </a>
                     <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
