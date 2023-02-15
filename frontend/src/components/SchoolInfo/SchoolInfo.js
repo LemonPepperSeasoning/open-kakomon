@@ -3,7 +3,7 @@ import { countryList } from '../../utils/CountryNameToISO'
 import { GrDomain } from 'react-icons/gr';
 import universityPicture from '../../assets/images/UoT.jpeg';
 import websiteIcon from '../../assets/icons/Globe.svg'
-
+import fetchSchoolByName from '../../apis/school.api'
 
 const SchoolInfo = (props) => {
 
@@ -27,6 +27,8 @@ const SchoolInfo = (props) => {
     const { schoolName } = props
 
     const fetchData = async (schoolName) => {
+        console.log("#fetchData called")
+        fetchSchoolByName("The University of Tokyo");
         setCountryCode(countryList["Japan"].toLowerCase())
         setSchoolDetails(
             {

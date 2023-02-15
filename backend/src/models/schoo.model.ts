@@ -1,11 +1,14 @@
 import mongoose, { Schema, model } from "mongoose";
 
 export interface SchoolModel {
-  name: string;
+  english_name: string;
+  japanese_name: string;
   address: {
     postal_code: string;
     address: string;
   };
+  type: string;
+  deviation_value: string;
   national_ranking: number;
   international_ranking: number;
   country: string;
@@ -20,9 +23,12 @@ export interface SchoolModel {
  *     School:
  *       type: object
  *       required:
- *         - name
+ *         - english_name
  *       properties:
- *         name:
+ *         english_name:
+ *           type: string
+ *           description: The name of the univerity.
+ *         japanese_name:
  *           type: string
  *           description: The name of the univerity.
  *         address:
@@ -47,28 +53,39 @@ export interface SchoolModel {
  *         school_image_url:
  *           type: string
  *           description: The url to s3 bucket where school image is stored.
+ *         type:
+ *           type: string
+ *           description: School type (i.e, public, private, national).
+ *         deviation_value:
+ *           type: string
+ *           description: deviation value of the school.
+ *
  *       example:
- *         name: University of Tokyo
- *         address:
- *           postal_code: 000-0000
- *           address: tokyo, Japan
- *         national_ranking: 1
- *         international_ranking: 20
- *         country: Japan
- *         website_url: google.com
- *         school_image_url: s3://bucket_url.com
+ *           type: 国立
+ *           national_ranking: 1
+ *           deviation_value: 75.0
+ *           internationl_ranking: 23
+ *           english_name: The University of Tokyo
+ *           japanese_name: 東京大学
+ *           address:
+ *             postal_code: 〒113-8654
+ *             address: 東京都文京区本郷７丁目３−１
+ *           website_url: https://www.u-tokyo.ac.jp/ja/index.html
+ *           country: Japan
  */
 const schema = new Schema<SchoolModel>({
-  name: { type: String, required: true },
+  english_name: { type: String, required: true },
+  japanese_name: { type: String, required: true },
   address: {
     postal_code: { type: String, required: false },
     address: { type: String, required: false },
   },
-  national_ranking: { type: Number, required: true },
-  international_ranking: { type: Number, required: true },
+  type: { type: String, required: false },
+  national_ranking: { type: Number, required: false },
+  international_ranking: { type: Number, required: false },
   country: { type: String, required: true },
   website_url: { type: String, required: true },
-  school_image_url: { type: String, required: true },
+  school_image_url: { type: String, required: false },
 });
 
 export default model<SchoolModel>("School", schema);

@@ -19,7 +19,7 @@ import PostExamPage from './pages/PostExamPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div class="flex flex-col h-screen justify-between">
+    <div className="flex flex-col justify-between h-screen">
       <header><Header /></header>
 
       <BrowserRouter>

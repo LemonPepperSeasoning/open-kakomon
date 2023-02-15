@@ -28,7 +28,10 @@ export const getSchool = async (
   logger.info("GET /school request from frontend");
   try {
     // TODO Implement
-    logger.info("ERROR: getSchool() not yet implemented");
+    const school = await schoolService.getSchoolWithName(
+      req.query.english_name
+    );
+    res.status(httpStatus.OK).json(school).end();
   } catch (e) {
     next(e);
   }

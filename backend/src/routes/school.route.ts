@@ -42,14 +42,14 @@ routes.post("/", createSchool);
  *   description: The books managing API
  * /api/v1/school:
  *   get:
- *     summary: Create a new School
+ *     summary: Get School with matching name
  *     tags: [School]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/School'
+ *     parameters:
+ *       - in: query
+ *         name: english_name
+ *         schema:
+ *           type: string
+ *         description: The name of the university in english
  *     responses:
  *       200:
  *         description: The created book.

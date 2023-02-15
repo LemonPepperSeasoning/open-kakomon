@@ -18,7 +18,7 @@ const getSchoolWithId = async (reqSchoolId: string) => {
 };
 
 const getSchoolWithName = async (reqSchoolName: string) => {
-  const query = { name: reqSchoolName };
+  const query = { english_name: reqSchoolName };
   return School.findOne(query);
 };
 
