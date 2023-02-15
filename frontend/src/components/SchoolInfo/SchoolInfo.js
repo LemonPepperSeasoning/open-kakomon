@@ -62,6 +62,9 @@ const SchoolInfo = (props) => {
                         {schoolDetails.japanese_name}
                     </p>
                     <p className="text-base font-semibold">
+                        {schoolDetails.type}
+                    </p>
+                    <p className="text-base font-semibold">
                         {schoolDetails.address.address}
                     </p>
                 </div>
