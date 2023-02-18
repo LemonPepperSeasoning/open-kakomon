@@ -3,7 +3,7 @@ import SchoolPopularityListItem from './SchoolPopularityListItem'
 const SchoolPopularityList = () => {
   const demoData = [
     {
-      "name": "University of Tokyo",
+      "name": "The University of Tokyo",
       "view_count": 1831,
       "national_ranking": 1,
       "country_location": "Japan",

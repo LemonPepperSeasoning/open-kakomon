@@ -28,24 +28,27 @@ const SchoolInfo = (props) => {
 
     const fetchData = async (schoolName) => {
         console.log("#fetchData called")
-        fetchSchoolByName("The University of Tokyo");
-        setCountryCode(countryList["Japan"].toLowerCase())
+        console.log(schoolName)
+        const schoolInfo = await fetchSchoolByName(schoolName);
+
         setSchoolDetails(
             {
-                type: "国立",
-                national_ranking: "1",
-                deviation_value: "75.0",
-                internationl_ranking: "23",
-                english_name: "The University of Tokyo",
-                japanese_name: "東京大学",
+                type: schoolInfo.type,
+                national_ranking: schoolInfo.national_ranking,
+                deviation_value: schoolInfo.deviation_value,
+                internationl_ranking: schoolInfo.internationl_ranking,
+                english_name: schoolInfo.english_name,
+                japanese_name: schoolInfo.japanese_name,
                 address: {
-                    postal_code: "〒113-8654",
-                    address: "東京都文京区本郷７丁目３−１"
+                    postal_code: schoolInfo.address.postal_code,
+                    address: schoolInfo.address.address
                 },
-                website_url: "https://www.u-tokyo.ac.jp/ja/index.html",
-                country: "Japan"
+                website_url: schoolInfo.website_url,
+                country: schoolInfo.country
             }
         )
+        setCountryCode(countryList[schoolInfo.country].toLowerCase())
+
     }
 
     useEffect(() => {
