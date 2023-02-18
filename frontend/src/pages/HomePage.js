@@ -19,7 +19,7 @@ function HomePage() {
 
   return (
     <>
-      <main class="mb-auto">
+      <main className="mb-auto">
         <div>
           <div className="bg-gray-100">
 

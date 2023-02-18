@@ -5,8 +5,6 @@ import universityPicture from '../../assets/images/UoT.jpeg';
 
 const SchoolPopularityListItem = (props) => {
 
-    console.log(props)
-
     const [imageSrc, setImageSrc] = useState("default_school_logo.jpg");
     const countryCode = countryList[props.school.country_location].toLowerCase();
 
@@ -47,7 +45,7 @@ const SchoolPopularityListItem = (props) => {
                             </div>
 
                             <div className="flex mr-4">
-                                <span class={"fi fi-" + countryCode} />&nbsp; #{props.school.national_ranking}
+                                <span className={"fi fi-" + countryCode} />&nbsp; #{props.school.national_ranking}
                             </div>
 
                             {props.school.view_count} views
