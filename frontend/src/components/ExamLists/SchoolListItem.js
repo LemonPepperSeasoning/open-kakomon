@@ -10,16 +10,15 @@ const SchoolListItem = (props) => {
 
     return (
         <>
-            <div className="p-3 mb-8 rounded-md bg-slate-200" >
+            <div className="p-3 mb-8 rounded-md bg-slate-200" key={props.name}>
 
                 <button className="w-full p-1 text-lg text-left rounded-md hover:bg-slate-400" onClick={toggle}>
                     <p className="font-semibold"> {props.name}</p>
-                    {/* {props.name} */}
                 </button>
 
                 {open && (
                     <div className="toggle">
-                        {props.exams.map(c => <ExamListItem year={c.year} major={c.major} />)}
+                        {props.exams.map((object, id) => <ExamListItem year={object.year} major={object.major} key={id} />)}
                     </div>
                 )}
 

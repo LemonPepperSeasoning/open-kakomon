@@ -79,7 +79,7 @@ const SchoolInfo = (props) => {
                         🌎 #{schoolDetails.internationl_ranking}
                     </div>
                     <div>
-                        <span class={"fi fi-" + countryCode} />&nbsp; #{schoolDetails.national_ranking}
+                        <span className={"fi fi-" + countryCode} />&nbsp; #{schoolDetails.national_ranking}
                     </div>
                 </div>
 
