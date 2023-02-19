@@ -17,8 +17,8 @@ const getSchoolWithId = async (reqSchoolId: string) => {
   return School.findOne(query);
 };
 
-const getSchoolWithName = async (reqSchoolName: string) => {
-  const query = { english_name: reqSchoolName };
+const getSchoolByField = async (fieldName: string, value: string) => {
+  const query = { [fieldName]: value };
   return School.findOne(query);
 };
 
@@ -47,7 +47,7 @@ const schoolService = {
   createSchool,
   getAllSchools,
   getSchoolWithId,
-  getSchoolWithName,
+  getSchoolByField,
   updateSchoolWithId,
   updateSchool,
   deleteSchool,

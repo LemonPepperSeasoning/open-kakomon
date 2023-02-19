@@ -27,8 +27,8 @@ export const getSchool = async (
 ): Promise<void> => {
   logger.info("GET /school request from frontend");
   try {
-    // TODO Implement
-    const school = await schoolService.getSchoolWithName(
+    const school = await schoolService.getSchoolByField(
+      "english_name",
       req.query.english_name
     );
     res.status(httpStatus.OK).json(school).end();
