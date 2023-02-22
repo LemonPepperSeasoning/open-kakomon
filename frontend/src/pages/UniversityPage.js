@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ExamLists from "../components/ExamLists/ExamLists";
+import ReviewLists from "../components/ReviewLists/ReviewLists";
 import SchoolInfo from "../components/SchoolInfo/SchoolInfo"
 // import image from 'assets/UoT.jpeg'
 
@@ -41,7 +42,10 @@ function UniversityPage() {
                 </div>
                 <div>
                     <div className="flex justify-center">
-                        <ExamLists />
+                        {
+                            displayContent === "exam" ? <ExamLists /> : <ReviewLists />
+                        }
+
                     </div>
                 </div>
             </div>
