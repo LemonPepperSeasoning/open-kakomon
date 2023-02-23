@@ -28,9 +28,10 @@ root.render(
         </Routes>
 
         <Routes>
-          <Route path="/university/:name" element={<UniversityPage />} />
-          <Route path="/university/:name/exam" element={<UniversityPage />} />
-          <Route path="/university/:name/reviews" element={<UniversityPage />} />
+          <Route path="/university/:name" element={<UniversityPage />} >
+            <Route path="/university/:name/exam" element={<UniversityPage />} />
+            <Route path="/university/:name/reviews" element={<UniversityPage />} />
+          </Route>
         </Routes>
 
         <Routes>

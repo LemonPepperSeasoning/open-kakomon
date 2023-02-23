@@ -26,17 +26,17 @@ function UniversityPage() {
                 <div className="border-b-2 border-gray-100">
 
                     <div className="flex w-3/4 m-auto">
-                        <a onClick={() => navigate("/university/" + name + "/exam")}>
-                            <p className={"py-2 px-4 border-b-[3px] border-transparent hover:border-blue-500" + (displayContent === "exam" ? " text-base font-medium" : "")}>
+                        <div onClick={() => navigate("/university/" + name + "/exam")}>
+                            <p className={"mx-2 py-2 px-4 border-b-[3px] border-transparent hover:border-blue-500" + (displayContent === "exam" ? " text-base font-medium border-blue-500" : "")}>
                                 Exam
                             </p>
-                        </a>
+                        </div>
 
-                        <a onClick={() => navigate("/university/" + name + "/reviews")}>
-                            <p className={"py-2 px-4 border-b-[3px] border-transparent hover:border-blue-500" + (displayContent === "reviews" ? " text-base font-medium" : "")}>
+                        <div onClick={() => navigate("/university/" + name + "/reviews")}>
+                            <p className={"mx-2 py-2 px-4 border-b-[3px] border-transparent hover:border-blue-500" + (displayContent === "reviews" ? " text-base font-medium border-blue-500" : "")}>
                                 Reviews
                             </p>
-                        </a>
+                        </div>
                     </div>
 
                 </div>

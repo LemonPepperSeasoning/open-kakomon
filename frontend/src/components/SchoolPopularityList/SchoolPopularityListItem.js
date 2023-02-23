@@ -26,7 +26,7 @@ const SchoolPopularityListItem = (props) => {
     // UNICODE FROM : https://unicode-table.com/en/search/?q=world
     return (
         <>
-            <a href={"/university/" + props.school.name}>
+            <a href={"/university/" + props.school.name + "/exam"}>
                 <div className="flex p-1 mx-auto rounded-md w-72 bg-slate-200 hover:bg-slate-300">
                     <div>
                         <img className="object-cover w-12 h-12 m-1" src={universityPicture} alt="school logo" />
