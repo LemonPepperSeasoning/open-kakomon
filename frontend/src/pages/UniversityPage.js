@@ -19,7 +19,7 @@ function UniversityPage() {
 
     return (
         <>
-            <div>
+            <div className="m-2">
                 <SchoolInfo schoolName={name} />
 
 

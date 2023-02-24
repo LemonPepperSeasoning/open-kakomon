@@ -60,7 +60,7 @@ const SchoolInfo = (props) => {
         <>
             <div className="flex m-auto w-fit bg-slate-200">
 
-                <img className="object-cover m-1 w-36 h-36" src={universityPicture} alt="image" />
+                <img className="object-cover m-1 w-36 h-36" src={universityPicture} alt="school" />
 
                 <div className="mx-5 my-auto">
                     <p className="text-xl font-semibold">
@@ -85,7 +85,7 @@ const SchoolInfo = (props) => {
 
                 <div className="mx-3 my-auto">
                     <a className="flex" href={schoolDetails.website_url} target="_blank" rel="noopener noreferrer">
-                        <img src={websiteIcon} className="stroke-cyan-500" />
+                        <img src={websiteIcon} className="stroke-cyan-500" alt='website' />
                         Website
                     </a>
 

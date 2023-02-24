@@ -19,7 +19,7 @@ import PostExamPage from './pages/PostExamPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-start h-screen">
       <header><Header /></header>
 
       <BrowserRouter>
@@ -57,7 +57,7 @@ root.render(
 
       <br />
       <br />
-      <footer> <Footer /></footer>
+      <footer className='mt-auto'> <Footer /></footer>
     </div>
   </React.StrictMode>
 );
