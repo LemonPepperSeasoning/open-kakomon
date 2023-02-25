@@ -62,10 +62,6 @@ function HomePage() {
             <SchoolPopularSchoolsList />
           </div>
 
-          <div className="flex justify-center">
-            <ExamLists />
-          </div>
-
 
           <div className="max-w-2xl m-auto text-xl font-semibold bg-gray-100 w-fit">
             <p>
