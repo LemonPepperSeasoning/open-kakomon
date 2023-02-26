@@ -45,11 +45,9 @@ const ExamLists = () => {
 
 
     return (
-        <>
-            <div className="w-3/4 p-4 m-8 rounded-md bg-slate-100">
-                {demoData.map((object, id) => <SchoolListItem name={object.name} exams={object.exams} key={id} />)}
-            </div>
-        </>
+        <div className="w-3/4 p-4 mx-auto my-8 rounded-md bg-slate-100">
+            {demoData.map((object, id) => <SchoolListItem name={object.name} exams={object.exams} key={id} />)}
+        </div>
     )
 }
 

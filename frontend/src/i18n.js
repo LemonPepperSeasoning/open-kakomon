@@ -2,17 +2,14 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const lngs = {
-    en: { nativeName: "English" },
-    jp: { naviveName: "Japanese" }
-}
+
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .use(LanguageDetector)
     .init({
 
-        lng: "en", // if you're using a language detector, do not define the lng option
+        lng: "jp", // if you're using a language detector, do not define the lng option
         fallbackLng: "en",
 
         // the translations
@@ -34,7 +31,12 @@ i18n
                     "contact": "Contact",
                     "open-kakomon": "Open Kakomon",
                     "gather-by-community-message": "This is a public database, gathered by our community.",
-                    "please-share-message": "If you have any exam, please share with us by submitting it below."
+                    "please-share-message": "If you have any exam, please share with us by submitting it below.",
+                    "comment": "comment",
+                    "write-a-review": "Write a review",
+                    "website": "Website",
+                    "exam": "Exam",
+                    "reviews": "Review",
                 }
             },
             jp: {
@@ -52,7 +54,12 @@ i18n
                     "contact": "お問い合わせ",
                     "open-kakomon": "オープン過去問",
                     "gather-by-community-message": "このサイトは、皆さもの協力により過去問を提供させていただいております。",
-                    "please-share-message": "もし、過去問がありましたら是非シェアーしてください。"
+                    "please-share-message": "もし、過去問がありましたら是非シェアーしてください。",
+                    "comment": "コメント",
+                    "write-a-review": "クチコミを書く",
+                    "website": "Webサイト",
+                    "exam": "過去問",
+                    "reviews": "クチコミ",
                 }
             }
         },

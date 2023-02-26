@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaSearch } from 'react-icons/fa';
-import ExamLists from "../components/ExamLists/ExamLists";
 import SchoolPopularSchoolsList from "../components/SchoolPopularityList/SchoolPopularityList"
+import SearchIcon from "../assets/icons/Search_Magnifying_Glass.svg"
+
 
 function HomePage() {
   const { t } = useTranslation();
@@ -25,20 +26,6 @@ function HomePage() {
 
             <form className="max-w-xl p-10 mx-auto" onSubmit={onSubmit}>
               <h1 className="p-5 text-3xl font-medium">{t('search_title')}</h1>
-
-              <div className="flex w-full rounded-md">
-                <div className="justify-center w-full" >
-                  <input name="university"
-                    className="w-full py-3 pl-5 rounded-md form-input"
-                    placeholder="University name, Subject, City name "
-                  />
-                </div>
-
-                <button className="px-4 rounded-md hover:bg-gray-300">
-                  <FaSearch className="w-5 text-blue-400" />
-                </button>
-              </div>
-
               <br />
 
               <div className="flex w-full rounded-md">
@@ -50,7 +37,7 @@ function HomePage() {
                 </div>
 
                 <button className="px-4 bg-blue-600 rounded-md hover:bg-blue-700">
-                  <FaSearch className="w-5 text-white" />
+                  <img src={SearchIcon} alt="search" />
                 </button>
               </div>
             </form>

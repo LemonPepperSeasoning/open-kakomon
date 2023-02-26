@@ -13,9 +13,16 @@ const ReviewListsItem = (props) => {
                     </div>
                 </div>
 
-                <div>
+                <span>
                     {props.review.comment}
-                </div>
+                </span>
+
+                {/* 
+                <div >
+                    <button className='mx-2'>Reply</button>
+                    <button className='mx-2'>Edit</button>
+                    <button className='mx-2'>Delete</button>
+                </div> */}
             </div>
         </>
     )

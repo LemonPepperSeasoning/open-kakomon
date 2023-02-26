@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { countryList } from '../../utils/CountryNameToISO'
 import universityPicture from '../../assets/images/UoT.jpeg';
 import websiteIcon from '../../assets/icons/Globe.svg'
 import fetchSchoolByName from '../../apis/school.api'
 
 const SchoolInfo = (props) => {
+    const { t } = useTranslation();
 
     const [countryCode, setCountryCode] = useState();
     const [schoolDetails, setSchoolDetails] = useState({
@@ -27,7 +29,6 @@ const SchoolInfo = (props) => {
 
     const fetchData = async (schoolName) => {
         console.log("#fetchData called")
-        console.log(schoolName)
         const schoolInfo = await fetchSchoolByName(schoolName);
 
         setSchoolDetails(
@@ -85,7 +86,7 @@ const SchoolInfo = (props) => {
                 <div className="mx-3 my-auto">
                     <a className="flex" href={schoolDetails.website_url} target="_blank" rel="noopener noreferrer">
                         <img src={websiteIcon} className="stroke-cyan-500" alt='website' />
-                        Website
+                        {t('website')}
                     </a>
 
                 </div>
