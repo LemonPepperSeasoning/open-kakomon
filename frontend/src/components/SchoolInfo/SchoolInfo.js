@@ -48,7 +48,6 @@ const SchoolInfo = (props) => {
             }
         )
         setCountryCode(countryList[schoolInfo.country].toLowerCase())
-
     }
 
     useEffect(() => {
