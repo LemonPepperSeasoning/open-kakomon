@@ -9,6 +9,11 @@ const PostExamPage = () => {
         console.log(data);
     }
 
+    const thisYear = new Date().getFullYear();
+    const yearOptions = Array.from({ length: 20 }, (_, i) => thisYear - i)
+
+
+
     return (
         <>
             <div className="w-2/3 max-w-screen-sm m-auto">
@@ -43,13 +48,12 @@ const PostExamPage = () => {
                         <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             {t("year_of_exam")}
                         </label>
-                        <input
-                            type="year"
-                            id="year"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="2022"
-                            required />
+                        <select id="year" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Choose a year</option>
+                            {yearOptions.map((year) => (<option value={year} >{year}</option>))}
+                        </select>
                     </div>
+
 
 
                     <div>

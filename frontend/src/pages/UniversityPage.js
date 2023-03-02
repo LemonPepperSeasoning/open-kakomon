@@ -22,6 +22,7 @@ function UniversityPage() {
             <div className="m-2">
                 <SchoolInfo schoolName={name} />
 
+
                 <div className="border-b-2 border-gray-100">
 
                     <div className="flex w-3/4 m-auto">
