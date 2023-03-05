@@ -45,49 +45,17 @@ const ReviewLists = () => {
 
     const submitReview = (e) => {
         e.preventDefault();
-        console.log(e);
+
+        const randomUsename = "user-" + Math.floor(Math.random() * 1000000000);
         const newReview = {
-            comment: textarea,
-            username: name
+            comment: e.target.elements.comment.value,
+            username: randomUsename
         }
         setDummyReview(oldArray => [newReview, ...oldArray]);
+        e.target.elements.comment.value = ""
     }
     return (
         <div className="w-3/4 p-4 mx-auto my-8">
-
-            {/* <div className="rounded-md bg-red">
-                <form onSubmit={submitReview}>
-                    <div>
-                        <input name="university"
-                            type="text"
-                            className="w-1/2 py-3 pl-5 border-2 border-black rounded-md form-input"
-                            placeholder="Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-
-                        <select className="p-2 rounded-md"
-                            name="Status"
-                            id="status">
-                            <option value="" selected disabled hidden>--- Choose here ---</option>
-                            <option value={`student`}>I'm student at this University</option>
-                            <option value={`preparing`}>I am preparing for this entrance exam</option>
-                            <option value={`took`}>I took this entrance exam paper</option>
-                            <option value={`random`}>I am Random</option>
-                        </select>
-                    </div>
-
-                    <textarea name="university"
-                        className="w-full py-3 pl-5 border-2 border-black rounded-md form-input"
-                        placeholder="Comment ... " value={textarea} onChange={handleChange}
-                    />
-
-                    <button className="p-2 text-white bg-blue-600 rounded-md p-82 hover:bg-blue-700" >
-                        Write a review
-                    </button>
-                </form>
-            </div> */}
-
 
             <form onSubmit={submitReview}>
                 <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -98,6 +66,7 @@ const ReviewLists = () => {
                             rows="4"
                             class="border-0 outline-none w-full px-0 text-sm text-gray-900 bg-white dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                             placeholder="Write a comment..."
+                            name="comment"
                             required />
                     </div>
                     <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
@@ -113,8 +82,6 @@ const ReviewLists = () => {
                     </div>
                 </div>
             </form>
-
-
 
 
             <div className="rounded-md">
