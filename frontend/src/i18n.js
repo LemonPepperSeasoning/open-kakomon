@@ -37,6 +37,12 @@ i18n
                     "website": "Website",
                     "exam": "Exam",
                     "reviews": "Review",
+                    "post-comment": "Post comment",
+                    "helpful": "Helpful",
+                    "not-helpful": "Not helpful",
+                    "report": "Report",
+                    "read-more": "Read more",
+                    "write-a-comment": "Write a comment...",
                 }
             },
             jp: {
@@ -60,6 +66,12 @@ i18n
                     "website": "Webサイト",
                     "exam": "過去問",
                     "reviews": "クチコミ",
+                    "post-comment": "送信",
+                    "helpful": "役に立った",
+                    "not-helpful": "役に立たない",
+                    "report": "報告する",
+                    "read-more": "もっと見る",
+                    "write-a-comment": "ここに質問を入力",
                 }
             }
         },
