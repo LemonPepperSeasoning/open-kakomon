@@ -1,7 +1,6 @@
 import { useState } from "react";
-import userIcon from '../../assets/icons/User_01.svg'
 import { useTranslation } from "react-i18next";
-import ReportModal from "./ReportModal"
+import ReportModal from "./ReportModal2"
 
 const ReviewListsItem = (props) => {
 
@@ -9,7 +8,6 @@ const ReviewListsItem = (props) => {
 
     const [isModalOpen, setModalIsOpen] = useState(false);
 
-    console.log(useState("hello")[1])
     const toggleModal = () => {
         setModalIsOpen(!isModalOpen);
     };
@@ -28,7 +26,10 @@ const ReviewListsItem = (props) => {
 
                 <article>
                     <div class="flex items-center mb-4 space-x-4">
-                        <img class="w-10 h-10 rounded-full" src={userIcon} alt="" />
+                        <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                            <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                        </div>
+
                         <div class="space-y-1 font-medium dark:text-white">
                             <p>{props.review.username} <time datetime="2014-08-16 19:00" class="block text-sm text-gray-500 dark:text-gray-400">2014/05/10</time></p>
                         </div>
