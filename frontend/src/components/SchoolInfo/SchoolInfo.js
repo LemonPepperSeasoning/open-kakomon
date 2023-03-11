@@ -24,8 +24,8 @@ const SchoolInfo = (props) => {
         country: ""
     });
 
-
-    const { schoolName } = props
+    const schoolName = decodeURI(window.location.pathname.split("/")[2])
+    // const { schoolName } = props
 
     const fetchData = async (schoolName) => {
         console.log("#fetchData called")
