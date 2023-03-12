@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 
 const ReviewLists = () => {
     const { t } = useTranslation();
-    const [textarea, setTextarea] = useState("");
-    const [name, setName] = useState("");
 
     const initalReview = [
         {
@@ -30,10 +28,6 @@ const ReviewLists = () => {
         },
     ]
     const [dummayReview, setDummyReview] = useState([]);
-
-    const handleChange = (event) => {
-        setTextarea(event.target.value)
-    }
 
     useEffect(() => {
         setDummyReview(initalReview)

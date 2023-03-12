@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 import { countryList } from '../../utils/CountryNameToISO'
 import universityPicture from '../../assets/images/UoT.jpeg';
 import websiteIcon from '../../assets/icons/Globe.svg'
@@ -24,7 +25,8 @@ const SchoolInfo = (props) => {
         country: ""
     });
 
-    const schoolName = decodeURI(window.location.pathname.split("/")[2])
+    const { schoolName } = useParams();
+    // const schoolName = decodeURI(window.location.pathname.split("/")[2])
     // const { schoolName } = props
 
     const fetchData = async (schoolName) => {
@@ -57,6 +59,7 @@ const SchoolInfo = (props) => {
 
     return (
         <>
+            {schoolName}
             <div className="flex m-auto w-fit bg-slate-200">
 
                 <img className="object-cover m-1 w-36 h-36" src={universityPicture} alt="school" />
